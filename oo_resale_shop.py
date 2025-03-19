@@ -25,7 +25,7 @@ class ResaleShop:
     """
     This function buys a new computer by adding it to the Resale Shop's inventory
     """
-    def buy_computer(self, new_computer):
+    def buy(self, new_computer):
         print("Buying", new_computer.description)
         print("Adding to inventory...")
         self.inventory.append(new_computer)
@@ -36,7 +36,7 @@ class ResaleShop:
     This function sells a computer by removing it from the resale shop's inventory
     If there are no computers in the inventory, it prints an error message
     """
-    def sell_computer(self, old_computer:Computer):
+    def sell(self, old_computer:Computer):
         print("Selling", old_computer.description, "......")
         if old_computer in self.inventory: 
             computer_location = self.inventory.index(old_computer)
@@ -125,8 +125,8 @@ def main():
     sof_shop.check_inventory()
 
     # next, we need to buy some computers to sell and take a peek at our new and improved inventory
-    sof_shop.buy_computer(pc_1)
-    sof_shop.buy_computer(pc_2)
+    sof_shop.buy(pc_1)
+    sof_shop.buy(pc_2)
     sof_shop.check_inventory()
 
     # these computers are old! we need to do some updating
@@ -135,9 +135,9 @@ def main():
     sof_shop.check_inventory()
 
     # now we gotta make some money and sell them
-    sof_shop.sell_computer(pc_2)
+    sof_shop.sell(pc_2)
     sof_shop.check_inventory()
-    sof_shop.sell_computer(pc_1)
+    sof_shop.sell(pc_1)
     sof_shop.check_inventory()
     print("This time it's a good thing! We bought and sold all of our computers!")
 
