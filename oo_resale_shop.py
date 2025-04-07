@@ -65,8 +65,7 @@ class ResaleShop:
     This function refurbishes a computer by updating the operating system and updating the price.
     If the computer is not in the inventory, then it prints an error message
     """  
-    def refurbish_computer(self, new_computer:Computer):
-        new_OS = "MacOS Monterey" 
+    def refurbish_computer(self, new_computer:Computer, new_OS): #make it so you can input new OS
         print("Refurbishing", new_computer.description, ", updating OS to", new_OS)
         if new_computer in self.inventory:
             print("Updating OS...")
@@ -129,9 +128,10 @@ def main():
     sof_shop.buy(pc_2)
     sof_shop.check_inventory()
 
+#new_OS = "MacOS Monterey" 
     # these computers are old! we need to do some updating
-    sof_shop.refurbish_computer(pc_2)
-    sof_shop.refurbish_computer(pc_3)
+    sof_shop.refurbish_computer(pc_2, "MacOS Monterey")
+    sof_shop.refurbish_computer(pc_3, "MacOS High Sierra")
     sof_shop.check_inventory()
 
     # now we gotta make some money and sell them

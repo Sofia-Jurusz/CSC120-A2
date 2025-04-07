@@ -6,3 +6,6 @@ This assignment was not too difficult, but it had a very rocky start. I got a lo
 
 First resubmit: 
 I changed the names of the buy and sell functions to match what they were supposed to be. 
+
+Second resubmit:
+When I rewrote the refurbish method, I did not have the right parameters. I was missing the new operating system, so I added that. I am hoping that will fix my problems of not being able to correctly refurbish a computer. 
